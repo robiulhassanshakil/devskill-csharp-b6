@@ -6,7 +6,19 @@ namespace Task1
 {
     public class Node<T, INode>:NodeBase<T, INode>where T:class
     {
-        public override string property1 => base.property1;
+        private string _property;
+        public override string property1
+        {
+            get
+            {
+                return _property;
+            }
+            set
+            {
+                _property = value;
+            }
+
+        }
 
 
         public override void GetCount()
